@@ -28,9 +28,32 @@ export default function App() {
           <Image
           source={require('./assets/coffee.jpg')} style={styles.image}>
           </Image>
-          <Text>Cappucino Especial</Text>
-          <Text>Cremoso e delicioso</Text>
-          <Text>R$ 12,90</Text>
+          <Text style={styles.produto}>Cappucino Especial</Text>
+          <Text style={styles.descricao}>Cremoso e delicioso</Text>
+          <Text style={styles.preco}>R$ 12,90</Text>
+        </View>
+        <Text style={styles.sectionTitle}>Nosso cardápio</Text>
+      </View>
+      <View style={styles.cards}>
+        <View style={styles.carditem}>
+          <Text style={styles.cardtitle}>Expresso</Text>
+          <Text style={styles.carddesc}>Puro e Forte</Text>
+          <Text style={styles.cardprice}>R$ 7,00</Text>
+        </View>
+        <View style={styles.carditem}>
+          <Text style={styles.cardtitle}>Cappuccino</Text>
+          <Text style={styles.carddesc}>Puro e Forte</Text>
+          <Text style={styles.cardprice}>R$ 12,90</Text>
+        </View>
+        <View style={styles.carditem}>
+          <Text style={styles.cardtitle}>Latte</Text>
+          <Text style={styles.carddesc}>Puro e Forte</Text>
+          <Text style={styles.cardprice}>R$ 11,50</Text>
+        </View>
+        <View style={styles.carditem}>
+          <Text style={styles.cardtitle}>Mocha</Text>
+          <Text style={styles.carddesc}>Puro e Forte</Text>
+          <Text style={styles.cardprice}>R$ 13,50</Text>
         </View>
       </View>
       {/* Main */}
@@ -101,5 +124,68 @@ const styles = StyleSheet.create ({
     height: 188,
     borderRadius: 16,
     marginBottom: 16
+  },
+  produto: {
+    fontSize: 20,
+    fontWeight:'800',
+    color:"#2f2d2c"
+  },
+  descricao: {
+    fontSize: 14,
+    color:"#9b9b9b",
+    marginTop: 4
+  },
+  preco: {
+    fontSize: 20,
+    color:'#c67c4e',
+    fontWeight:'800',
+    marginTop: 12
+  },
+
+  sectionTitle:{
+    fontSize: 22,
+    fontWeight: '800',
+    color:"#2f2d2c",
+    marginBottom: 16
+  },
+
+  carditem: {
+    width: "44%",
+    backgroundColor: "#ffffffff",
+    borderRadius: 16,
+    padding: 16,
+    shadowColor: "#0000000",
+    shadowOffset: {width: 0, height: 4},
+    shadowOpacity: 0.05,
+    elevation: 3,
+    marginBottom: 16
+  },
+
+  cardtitle:{
+    fontSize: 16,
+    fontWeight: "700",
+    color:"#2f2d2c"
+  },
+  
+  carddesc:{
+    fontSize: 12,
+    color: "#9b9b9b",
+    marginTop: 4,
+    lineHeight: 16
+  },
+  
+  cardprice:{
+    fontSize: 16,
+    color:'#c67c4e',
+    fontWeight:'800',
+    marginTop: 12
+  },
+
+  cards:{
+    display:"flex",
+    flexDirection: 'row',
+    flexWrap: "wrap",
+    justifyContent: 'space-evenly',
   }
+
 })
